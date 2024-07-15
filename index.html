@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Countdown Timer</title>
+    <title>Our Countdown</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -47,29 +47,32 @@
             background-color: #00444e; /* Updated rectangle fill color */
             box-shadow: 12px 12px 0px 0px rgba(2, 122, 136, 1); /* Drop shadow with reduced distance */
             z-index: 1;
-            width: 100%; /* Set width to 100% to be responsive */
-            max-width: 400px; /* Maximum width for larger screens */
+            width: 400px; /* Fixed width for the container */
+            max-width: 100%; /* Ensures the container does not exceed the viewport width */
             box-sizing: border-box; /* Include padding in the element's total width and height */
         }
         #countdown {
-            font-size: 2em; /* Reduced font size for better fit on mobile screens */
+            font-size: 3em; /* Set font size */
             font-weight: bold;
             color: #FFA6A8; /* Countdown color */
             white-space: nowrap; /* Prevents text wrapping */
             text-align: center; /* Center align text */
-            display: inline-block; /* Ensures the element takes only the necessary space */
+            display: block; /* Ensures the element takes only the necessary space */
         }
 
-        @media (min-width: 600px) {
+        @media (max-width: 600px) {
             #countdown {
-                font-size: 3em; /* Larger font size for bigger screens */
+                font-size: 2em; /* Reduced font size for better fit on mobile screens */
+            }
+            #container {
+                width: 100%; /* Full width on small screens */
             }
         }
     </style>
 </head>
 <body>
     <div id="background-image"></div>
-    <div id="title">Casey Lands in Los Angeles</div>
+    <div id="title">Casey Lands in Los Angeles ❤</div>
     <div id="container">
         <div id="countdown"></div>
     </div>
